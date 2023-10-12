@@ -1,0 +1,29 @@
+{
+  "name": "harness-lighthouse",
+  "version": "1.0.1",
+  "description": "Gives lighthouse result",
+  "main": "index.js",
+  "type": "module",
+  "preferGlobal": true,
+  "scripts": {
+    "start": "node index.js --url",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohanmrzan100/lighthouse-get"
+  },
+  "keywords": [
+    "lighthouse",
+    "harness"
+  ],
+  "author": "Rohan Maharjan",
+  "license": "ISC",
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "lighthouse": "^11.1.0",
+    "puppeteer": "^21.3.8"
+  }
+}

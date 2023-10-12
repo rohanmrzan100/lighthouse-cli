@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lighthouse-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lighthouse
+  template:
+    metadata:
+      labels:
+        app: lighthouse
+    spec:
+      containers:
+        - name: lighthouse
+          image: rohanmaharjan100/lighthouse:v1-release
+          args:
+            - "npx"
+            - "get"
+            - "--url"
+            - "https://facebook.com"
+          ports:
+            - containerPort: 4000
